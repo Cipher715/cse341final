@@ -8,6 +8,8 @@ const validation = require('../middleware/validate');
 router.get('/', bookController.getAll);
 // Get single book router
 router.get('/:id', bookController.getSingle);
+// Get books by author name
+router.get('/find/:author', bookController.getBookByAuthor);
 // Insert new boook router
 router.post('/', validation.checkBook, bookController.createBook);
 // Update a book router
