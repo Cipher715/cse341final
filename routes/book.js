@@ -9,7 +9,9 @@ router.get('/', bookController.getAll);
 // Get single book router
 router.get('/:id', bookController.getSingle);
 // Get books by author name
-router.get('/find/:author', bookController.getBookByAuthor);
+router.get('/find-by-author/:author', bookController.getBookByAuthor);
+// Get books by genre 
+router.get('/find-by-genre/:genre', bookController.getBookByGenre);
 // Insert new boook router
 router.post('/', validation.checkBook, bookController.createBook);
 // Update a book router

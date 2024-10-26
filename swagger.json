@@ -24,6 +24,7 @@
         }
       }
     },
+
     "/book/": {
       "get": {
         "tags": [
@@ -202,7 +203,7 @@
         }
       }
     },
-    "/book/find/{author}": {
+    "/book/find-by-author/{author}": {
       "get": {
         "tags": [
           "Books"
@@ -214,6 +215,33 @@
         "parameters": [
           {
             "name": "author",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/book/find-by-genre/{genre}": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "genre",
             "in": "path",
             "required": true,
             "type": "string"

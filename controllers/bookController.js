@@ -45,6 +45,20 @@ const getBookByAuthor = async (req, res) => {
     });
 };
 
+const getBookByGenre = async (req, res) => {
+    //#swagger.tags=['Books']
+    const author = req.params.genre;
+    const result = await mongodb.getDb().db().collection('book').find({ genre: genre });
+    result.toArray().then((book,err) => {
+        if (err) {
+          res.status(400).json({ message: err });
+        }else{
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(book);
+        }
+    });
+};
+
 
 const createBook = async (req, res) => {
     //#swagger.tags=['Books']
@@ -112,6 +126,7 @@ module.exports = {
     getAll,
     getSingle,
     getBookByAuthor,
+    getBookByGenre,
     createBook,
     updateBook,
     deleteBook,
