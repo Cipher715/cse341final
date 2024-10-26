@@ -47,7 +47,7 @@ const getBookByAuthor = async (req, res) => {
 
 const getBookByGenre = async (req, res) => {
     //#swagger.tags=['Books']
-    const author = req.params.genre;
+    const genre = req.params.genre;
     const result = await mongodb.getDb().db().collection('book').find({ genre: genre });
     result.toArray().then((book,err) => {
         if (err) {
