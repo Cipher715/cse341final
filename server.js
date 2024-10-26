@@ -35,6 +35,35 @@ app
   .use(cors({ origin: '*'}))
   .use('/', require('./routes/index'));
 
+passport.use(new GitHubStraregy({
+  clientID: process.env.GITHUB_CLIENT_ID,
+  clientSecret: process.env.GITHUB_CLIENT_SECRET,
+  callbackURL: process.env.CALLBACK_URL
+},
+function(accessToken, refreshToken, profile, done) {
+  return done(null, profile);
+}));
+
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+passport.deserializeUser((user, done) => {
+  done(null, user);
+});
+
+
+app.get('/github/callback', passport.authenticate('github', {
+
+  failureRedirect: '/api-docs', session: false}),
+  (req, res) => {
+    req.session.user = req.user;
+    res.redirect('/');
+});
+
+app.get('/',(req, res) => { 
+    res.send(req.session.user !== undefined ? `Welcome to Library. You're logged in as ${req.session.user.username}` : "Welcome to Library. You're not logged in.")
+});
+
 
 process.on('uncaughtException', (err, origin) => {
     console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
