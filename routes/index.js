@@ -11,6 +11,8 @@ router.use('/', require('./swagger'));
 
 router.use('/book', require('./book'));
 router.use('/author', require('./author'));
+router.use('/user', require('./user'));
+router.use('/review', require('./review'));
 
 router.get('/login', passport.authenticate('github'), (req, res) => {});
 

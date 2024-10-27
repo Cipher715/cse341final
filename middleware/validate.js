@@ -39,9 +39,52 @@ const checkAuthor = (req, res, next) => {
         next();
       }
     });
-  };
+};
+
+const checkUser = (req, res, next) => {
+    const validationRule = {
+      firstname: 'required|string',
+      lastname: 'required|string',
+      username: 'required|string',
+      password: 'required|string',
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+      if (!status) {
+        res.status(412).send({
+          success: false,
+          message: 'Validation failed',
+          data: err
+        });
+      } else {
+        next();
+      }
+    });
+};
+
+const checkReview = (req, res, next) => {
+    const validationRule = {
+      bookID: 'required|string',
+      username: 'required|string',
+      review: 'required|integer|min:1|max:5',
+      comment: 'required|string',
+      date: 'required|string',
+    };
+    validator(req.body, validationRule, {}, (err, status) => {
+      if (!status) {
+        res.status(412).send({
+          success: false,
+          message: 'Validation failed',
+          data: err
+        });
+      } else {
+        next();
+      }
+    });
+};
 
 module.exports = {
   checkBook,
-  checkAuthor
+  checkAuthor,
+  checkUser,
+  checkReview
 };

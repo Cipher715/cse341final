@@ -1,0 +1,37 @@
+[
+    {
+      "_id": "671c639078fadd47df201673",
+      "firstname": "Alice",
+      "lastname": "Johnson",
+      "username": "blue_sky23",
+      "password": "A1ice_Pass!"
+    },
+    {
+      "_id": "671c63a878fadd47df201674",
+      "firstname": "Michael",
+      "lastname": "Smith",
+      "username": "wanderlust42",
+      "password": "M!chael123"
+    },
+    {
+      "_id": "671c63be78fadd47df201675",
+      "firstname": "Sophia",
+      "lastname": "Garcia",
+      "username": "galactic_rose",
+      "password": "Sophia@321"
+    },
+    {
+      "_id": "671c63cc78fadd47df201676",
+      "firstname": "David",
+      "lastname": "Brown",
+      "username": "sunset_dreamer",
+      "password": "Dav!d_Pw0rd"
+    },
+    {
+      "_id": "671c63d878fadd47df201677",
+      "firstname": "Emily",
+      "lastname": "Davis",
+      "username": "midnight_echo",
+      "password": "Emily#12345"
+    }
+  ]

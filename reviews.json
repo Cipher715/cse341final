@@ -1,0 +1,90 @@
+[
+    {
+      "_id": "671c67f478fadd47df201678",
+      "bookID": "671b9817e5e845f90e475083",
+      "username": "blue_sky23",
+      "review": 5,
+      "comment": "An unforgettable story with deep characters.",
+      "date": "2023-10-01"
+    },
+    {
+      "_id": "671c683678fadd47df201679",
+      "bookID": "671b9833e5e845f90e475084",
+      "username": "wanderlust42",
+      "review": 4,
+      "comment": "A classic that lives up to its reputation.",
+      "date": "2023-09-15"
+    },
+    {
+      "_id": "671c684678fadd47df20167a",
+      "bookID": "671b9881e5e845f90e475085",
+      "username": "galactic_rose",
+      "review": 3,
+      "comment": "Interesting plot but slow in some parts.",
+      "date": "2023-08-22"
+    },
+    {
+      "_id": "671c685778fadd47df20167b",
+      "bookID": "671b988fe5e845f90e475086",
+      "username": "sunset_dreamer",
+      "review": 2,
+      "comment": "Found it hard to connect with the characters.",
+      "date": "2023-07-30"
+    },
+    {
+      "_id": "671c68c978fadd47df20167c",
+      "bookID": "671b98a1e5e845f90e475087",
+      "username": "midnight_echo",
+      "review": 5,
+      "comment": "Absolutely loved it! Highly recommend.",
+      "date": "2023-06-17"
+    },
+    {
+      "_id": "671c68e178fadd47df20167d",
+      "bookID": "671b98b6e5e845f90e475088",
+      "username": "blue_sky23",
+      "review": 4,
+      "comment": "Great themes, a bit lengthy though.",
+      "date": "2023-05-10"
+    },
+    {
+      "_id": "671c7d8678fadd47df20167e",
+      "bookID": "671ba60de5e845f90e47509b",
+      "username": "galactic_rose",
+      "review": 5,
+      "comment": "Beautifully written and thought-provoking.",
+      "date": "2023-04-27"
+    },
+    {
+      "_id": "671c7d9478fadd47df20167f",
+      "bookID": "671ba63be5e845f90e47509c",
+      "username": "wanderlust42",
+      "review": 3,
+      "comment": "Good book, but not quite my style.",
+      "date": "2023-03-19"
+    },
+    {
+      "_id": "671c7dc078fadd47df201680",
+      "bookID": "671ba66ee5e845f90e47509d",
+      "username": "midnight_echo",
+      "review": 4,
+      "comment": "Unique story, would read again.",
+      "date": "2023-02-11"
+    },
+    {
+      "_id": "671c7dcf78fadd47df201681",
+      "bookID": "671bb809e5e845f90e47509e",
+      "username": "sunset_dreamer",
+      "review": 1,
+      "comment": "Not what I expected, couldn’t finish it.",
+      "date": "2023-01-25"
+    },
+    {
+      "_id": "671d57b3bace367919e9945f",
+      "bookID": "671b9817e5e845f90e475083",
+      "username": "wanderlust42",
+      "review": 5,
+      "comment": "An unforgettable story with deep characters.",
+      "date": "2023-10-01"
+    }
+  ]
