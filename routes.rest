@@ -77,6 +77,15 @@ Content-Type: application/json
 DELETE http://localhost:8080/author/671d01f6ca07172818d509e3
 
 
+
+
+
+
+
+
+
+
+
 # Production
 
 ###Home
