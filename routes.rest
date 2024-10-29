@@ -82,6 +82,9 @@ DELETE http://localhost:8080/author/671d01f6ca07172818d509e3
 ###Home
 GET https://cse341final-mxdo.onrender.com/
 
+### Login
+GET https://cse341final-mxdo.onrender.com/login/
+
 ###Get book list
 GET https://cse341final-mxdo.onrender.com/book
 
@@ -143,7 +146,7 @@ Content-Type: application/json
   "birthday": "1948-09-20"
 }
 
-###Edit user
+###Edit author
 PUT https://cse341final-mxdo.onrender.com/author/671d01f6ca07172818d509e3 HTTP/1.1
 Content-Type: application/json
 
@@ -152,5 +155,80 @@ Content-Type: application/json
   "birthday": "1948-11-11"
 }
 
-###Delete user
+###Delete author
 DELETE https://cse341final-mxdo.onrender.com/author/671d01f6ca07172818d509e3
+
+
+
+### Get user
+GET https://cse341final-mxdo.onrender.com/user
+
+### Get user by ID
+GET https://cse341final-mxdo.onrender.com/user/671c639078fadd47df201673
+
+### Create user
+POST https://cse341final-mxdo.onrender.com/user/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstname": "Atsushi",
+  "lastname": "Karino",
+  "username": "ak715",
+  "password": "A1ice_Pass!"
+}
+
+### Edit user
+PUT https://cse341final-mxdo.onrender.com/user/ID HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstname": "Atsushi",
+  "lastname": "Karino",
+  "username": "ak715",
+  "password": "Password!!!"
+}
+
+### Delete user 
+DELETE https://cse341final-mxdo.onrender.com/user/ID
+
+
+
+### Get Reviews
+GET https://cse341final-mxdo.onrender.com/review/
+
+
+### Get review by ID
+GET https://cse341final-mxdo.onrender.com/review/671c67f478fadd47df201678
+
+### Get review by book
+GET https://cse341final-mxdo.onrender.com/review/find-by-book/671b9817e5e845f90e475083
+
+### Get review by username
+GET https://cse341final-mxdo.onrender.com/review/find-by-user/blue_sky23
+
+### Create review
+POST https://cse341final-mxdo.onrender.com/review/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "bookID": "671b9817e5e845f90e475083",
+  "username": "blue_sky23",
+  "review": 5,
+  "comment": "An unforgettable story with deep characters.",
+  "date": "2023-10-01"
+}
+
+### Edit review
+PUT https://cse341final-mxdo.onrender.com/review/ID HTTP/1.1
+Content-Type: application/json
+
+{
+  "bookID": "671b9817e5e845f90e475083",
+  "username": "blue_sky23",
+  "review": 5,
+  "comment": "An unforgettable story with deep characters.",
+  "date": "2023-11-11"
+}
+
+### Delete review
+DELETE https://cse341final-mxdo.onrender.com/review/ID
